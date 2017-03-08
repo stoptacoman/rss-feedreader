@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require tether
+//= require boostrap
 //= require turbolinks
 //= require_tree .
