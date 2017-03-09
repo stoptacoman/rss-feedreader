@@ -1,6 +1,15 @@
-<h1>Editing Feed</h1>
-
-<%= render 'form', feed: @feed %>
-
-<%= link_to 'Show', @feed %> |
-<%= link_to 'Back', feeds_path %>
+<div class="jumbotron">
+  <h1 class="display-3 text-center">Edit Feed</h1>        
+</div>
+    
+<div class="container-fluid">
+  <div class="row d-flex justify-content-center">
+    <div class="col-6">
+      <%= render 'form', feed: @feed %>
+      <br>
+      <%= link_to 'Show', @feed %> |
+      <%= link_to 'Back', feeds_path %>
+    </div>
+  </div>
+  
+</div>

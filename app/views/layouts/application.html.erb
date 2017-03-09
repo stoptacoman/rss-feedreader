@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RssFeedreader</title>
+    <title>RSSist</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,5 +10,12 @@
 
   <body>
     <%= yield %>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <p class="lead">RSSist: A feed reader.</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

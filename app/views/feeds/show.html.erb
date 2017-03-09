@@ -1,19 +1,16 @@
-<p id="notice"><%= notice %></p>
+<div class="row d-flex justify-content-center">
+  <div class="col-6">
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @feed.title %>
-</p>
 
-<p>
-  <strong>Url:</strong>
-  <%= @feed.url %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @feed.description %>
-</p>
-
-<%= link_to 'Edit', edit_feed_path(@feed) %> |
-<%= link_to 'Back', feeds_path %>
+    <div class="card">
+      <div class="card-block">
+        <h4 class="card-title"><%= @feed.title %></h4>
+        <h5 class="card-subtitle mb-2 text-muted"><%= @feed.description %></h5>
+        <p class="card-text"><%= @feed.url %></p>
+        <%= link_to 'Edit', edit_feed_path(@feed), :class => "card-link btn btn-primary" %>
+        <%= link_to 'Back', feeds_path, :class => "card-link btn btn-primary" %>  
+      </div>
+    </div>
+  </div>
+</div>
