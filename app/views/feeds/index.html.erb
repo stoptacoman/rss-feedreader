@@ -4,24 +4,26 @@
   <div class="container">
     <h1 class="display-1">Feeds</h1>
     <p class="lead">All of the feeds go here. Click on one to start reading!</p>
+    <p class="lead">Click below to add new ones!</p>
+    <p class="mt-5 lead">
+      <%= link_to 'New Feed', new_feed_path, :class => "btn btn-primary btn-lg" %>    
+    </p>
   </div>
 </div>
-
-<div class="d-flex justify-content-around">
-  <%= link_to 'New Feed', new_feed_path, :class => "btn btn-primary" %>
-</div>
 <br>
-<% @feeds.each do |feed| %>
-  <div class="row justify-content-center">
-    <div class="col-6">
-      <div class="card">
-        <div class="card-block">
-          <h3 class="card-title"><%= link_to feed.title, entries_path(feed), :class => "card-link" %></h3>
-          <p class="card-text"><%= feed.description %></p>
-          <%= link_to 'Edit', edit_feed_path(feed), :class => "card-link" %>
-          <%= link_to 'Delete', feed, method: :delete, data: { confirm: 'Are you sure?' }, :class => "card-link" %>
+<div class="container-fluid">
+  <% @feeds.each do |feed| %>
+    <div class="row justify-content-center">
+      <div class="col-6">
+        <div class="card">
+          <div class="card-block">
+            <h3 class="card-title"><%= link_to feed.title, entries_path(feed), :class => "card-link" %></h3>
+            <p class="card-text"><%= feed.description %></p>
+            <%= link_to 'Edit', edit_feed_path(feed), :class => "card-link" %>
+            <%= link_to 'Delete', feed, method: :delete, data: { confirm: 'Are you sure?' }, :class => "card-link" %>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>

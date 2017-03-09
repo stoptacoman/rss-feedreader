@@ -9,8 +9,13 @@
   </head>
 
   <body>
+    <%= yield %>
     <div class="container-fluid">
-      <%= yield %>
-    </div>    
+      <div class="row">
+        <div class="col-12">
+          <p class="lead">RSSist: A feed reader.</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
